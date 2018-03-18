@@ -1,0 +1,840 @@
+/*
+ Theme Name:     Noragram
+ Theme URI:      https://www.norahelmer.no
+ Description:    child theme of fluida
+ Author:         Frikk Fossan
+ Author URI:     https://www.norahelmer.no
+ Template:       fluida
+ Version:        1.1.0
+*/
+ 
+@import url("../fluida/style.css");
+ 
+/* =Theme customization starts here
+------------------------------------------------------- */
+.related-entry {
+    position: relative;
+    display: inline-block;
+    width: calc(100% - 10px);
+    margin: 1%;
+    /*padding: 10px;*/
+    overflow: hidden;
+    cursor: pointer;
+    font-size: 10px;
+    text-decoration: none;
+}
+.related-entry p {
+  padding: 5%;
+  background-color: #f8f8f8;
+  font-size: 130% !important;
+}
+@font-face {
+	font-family: Dollhouse;  
+	src: url(http://www.norahelmer.no/wp-content/themes/norahelmerblogg/fonts/dollie_script/DollieScript_PersonalUse.ttf);  
+	font-weight: normal;  
+}
+
+article div p {
+  font-size: 20px !important;
+}
+
+.header-fixed #branding {
+	height: 80px !important;
+}
+
+#site-title span a span:nth-child(1)  {
+	color:#545454 !important;
+	width: 0.7em !important;
+	font-weight: 800 !important;
+}
+
+#site-title {
+		font-family: "Indie Flower" !important;
+}
+
+#header-image {
+  width: 100%;
+  /*height: 0;
+  padding: 0 0 40%;
+  border: 1px solid;*/
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-left: auto;
+  margin-right: auto;
+}
+#masthead .header-image {
+	display: none !important;
+}
+
+#blogpost-header-image{
+	max-width: 100%;
+    width: 100%;
+    /* padding-left: 0px !important; */
+    background-size: cover;
+    background-position: 50% 50%;
+    margin-bottom: 1em !important;
+    /*position: absolute;
+    margin-left: 0px;
+    margin-bottom: 10px;
+    left: 0px;
+    right: 0px;
+    top: 0px;
+    bottom: 0px;*/
+}
+
+#content {
+	padding-left:0px !important;
+	padding-right:0px !important;
+	margin-top: 0px !important;
+}
+
+#image-title {
+	font-size: 150%;
+}
+
+.entry-header-image {
+  position: relative;
+  display: block;
+}
+
+.title-text-box {
+  position: absolute;
+  height: 30%;
+  text-align: center;
+  /*width: 100%;*/
+  margin-top: auto;
+  margin-bottom: auto;
+  margin-left: 25px;
+  margin-right: 25px;
+  color: white;
+  text-shadow: 2px 2px 2px rgba(0,0,0,.6);
+  top: 100px;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  /*font-size: 20px;*/
+}
+
+
+#blogpost-header-image {
+  display: block;
+  max-width: 100%;
+  /*height: 120px;*/
+  margin: auto;
+  padding: auto;
+}
+
+#image-title {
+  margin-top: auto;
+}
+
+.bokannonse {
+    padding: 20px;
+    /*margin-top: 25px;*/
+    margin-left: 10px;
+    margin-right: 10px;
+    opacity: 1;
+    /* color: white; */
+    overflow: hidden;
+    background-color: white;
+}
+
+.bokannonse img {
+    margin-right: 15px;
+    float: left;
+	  height:200px;
+}
+.bokannonse-img {
+  height: 100%
+}
+
+.test-frikk {
+  color: red;
+}
+
+.entry-content p img {
+    display: block;
+    margin: auto;
+}
+
+.relatedentry {
+  width: 100%;
+  margin-top: 20px;
+}
+
+.relatedentry li {
+    list-style: none !important;
+    list-style-type: none !important;
+    width: 45%;
+    margin: 0px 30px 0px 0 !important;
+    float: left;
+    padding: 0 0 20px;
+}
+.relatedentry li.even {
+    margin: 0 0 0px 0 !important;
+}
+
+.relatedentry .relatedthumb {
+    margin: 0 10px 10px 0;
+    width: 150px;
+    float: left;
+    border: 1px solid #dfdfdf;
+}
+.relatedentry li p {
+  font-size: 14px !important;
+}
+
+.nyhetsbrev {
+  padding: 5% 15%;
+}
+
+.nyhetsbrev form {
+  display: -webkit-box;  /* OLD - iOS 6-, Safari 3.1-6, BB7 */
+  display: -ms-flexbox;  /* TWEENER - IE 10 */
+  display: -webkit-flex; /* NEW - Safari 6.1+. iOS 7.1+, BB10 */
+  display: flex;         /* NEW, Spec - Firefox, Chrome, Opera */
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+}
+
+.nyhetsbrev div {
+  margin-bottom:10px;
+}
+
+.nyhetsbrev .nyhetsbrev-submit {
+  width:100%;
+  border-radius: 5px;
+}
+
+.nyhetsbrev .nyhetsbrev-email {
+  width:100%;
+  border-radius: 5px;
+}
+
+
+@media screen and (max-width: 3000px) {
+   
+   /* #blogpost-header-image {
+      box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.4);
+    }
+    #image-title {
+      font-size: 400%;
+      position: absolute;
+      top: 260px;
+    }
+    .bokannonse {
+      margin-left: 450px;
+      margin-right: 450px;
+       
+    }
+    .bokannonse img {
+     display:inline-block;
+    }
+    .bokannonse .title {
+      font-size: 25px; 
+      
+      
+    }
+    .bokannonse .description {
+      font-size: 16px; 
+      
+      
+    }
+    .bokannonse-text {
+      display:inline-block;
+      text-align: left;
+    }
+    .bokannonse-text p{
+      margin-bottom: 10px;
+    }
+    .entry-header-image {
+      padding-left: 450px;
+      padding-right: 450px;
+      
+    }
+    .title-text-box {
+      font-size: 40%;
+      top: 0px;
+      height: 50%;
+      margin-right: 465px;
+      margin-left: 465px;
+    }
+    */
+
+    .related-entry-container {
+      padding: 1%;
+      background-color: #f8f8f8;
+      text-align: center;
+    }
+
+    .related-entry-text {
+      font-size:90% !important;
+      padding: 3%;
+    }
+    
+    .bokannonse-only-img-header {
+      margin-top: 20px;
+    }
+    .bokannonse-only-img-between-post {
+      margin-bottom: 30px;
+    }
+
+    .pad-container {
+      margin-left:10%;
+      margin-right:10%;
+      padding-left: 5% !important;
+      padding-right: 5% !important;
+    }
+
+    .bokannonse-only-img img {
+      /*background: linear-gradient(to left,#E198AC, white);*/
+      box-shadow: 0.5em 0.5em 1em 0.1em rgba(0, 0, 0, 0.1);
+      display:block;
+      margin:auto;
+    }
+
+    .header-title-text-box {
+      font-size: 250%;
+      top: 70%;
+      position: absolute;
+      color: white;
+      width: 100%;
+      text-align: center;
+      text-shadow: 2px 2px 2px rgba(0,0,0,.6);
+    }
+
+    .header-title-text-box-advent {
+      font-size: 300%;
+      top: 50%;
+      position: absolute;
+      color: white;
+      width: 100%;
+      text-align: center;
+      text-shadow: 2px 2px 2px rgba(0,0,0,.6);
+    }
+
+    .header-title-text-box-advent h6 {
+      font-size: 120%;
+    }
+
+
+    .header-title-text-box h5 {
+        float: right;
+        position: absolute;
+        right: 20%;
+        bottom: -17%;
+        font-family: Dollhouse;
+        font-size: 250%;
+        color: #E198AC;
+    }
+
+    .header-title-text-box h6 {
+        float: right;
+        position: absolute;
+        right: 20%;
+        bottom: -17%;
+        font-family: Dollhouse;
+        font-size: 250%;
+        color: #E198AC;
+    }
+
+    #custom-site-title {
+      color: #E198AC !important;
+      line-height: 80px;
+      font-weight: 300 !important;
+      /*font-style: italic;*/
+      margin-bottom: 0px;
+      margin-top: 0px;
+      
+      /*font-family: Dollhouse;*/
+      
+    }
+    #custom-site-title p {
+      font-size: 200%;
+    }
+
+    .btn-comments-container {
+      text-align: center;
+    }
+    .btn-comments a {
+      display: inline-block;
+      padding: 8px 16px;
+      padding-left: 10%;
+      border: 1px solid #bbb;
+      padding-right: 10%;
+      border-radius: 20px;
+   }
+
+   .entry-post-date {
+      font-size: 100%;
+      text-align: center;
+    }
+
+    #branding-custom-quote {
+    float: left;
+    font-style: italic;
+    position: absolute;
+    margin-left: 1%;
+    top: 44px;
+  }
+
+  #site-header-main{
+    line-height: unset !important;
+  }
+
+}
+
+@media screen and (max-width: 1540px) {
+    /*
+    #blogpost-header-image {
+      box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.4);
+    }
+    #image-title {
+      font-size: 350%;
+      position: absolute;
+      top: 160px;
+    }
+    .bokannonse {
+      margin-left: 300px;
+      margin-right: 300px;
+      
+    }
+    
+    .bokannonse .title {
+      font-size: 36px; 
+      
+    }
+    .bokannonse .description {
+      font-size: 24px; 
+      
+    }
+    .entry-header-image {
+      padding-left: 300px;
+      padding-right: 300px;
+      
+    }
+    .title-text-box {
+      font-size: 40%;
+      top: 0px;
+      height: 50%;
+      margin-right: 315px;
+      margin-left: 315px;
+    }*/
+
+    
+
+    .pad-container {
+      margin-left:10%;
+      margin-right:10%;
+      padding-left: 5% !important;
+      padding-right: 5% !important;
+    }
+
+    .bokannonse-only-img img {
+      /*background: linear-gradient(to left,#E198AC, white);*/
+      box-shadow: 0.5em 0.5em 1em 0.1em rgba(0, 0, 0, 0.1);
+      display:block;
+      margin:auto;
+    }
+
+    .header-title-text-box {
+      font-size: 250%;
+      top: 70%;
+      position: absolute;
+      color: white;
+      width: 100%;
+      text-align: center;
+      text-shadow: 2px 2px 2px rgba(0,0,0,.6);
+    }
+
+    .header-title-text-box-advent {
+      font-size: 220%;
+      top: 45%;
+    }
+    .header-title-text-box-advent h6{
+      font-size: 120%;
+    }
+    
+
+    .header-title-text-box h6 {
+        float: right;
+        position: absolute;
+        right: 20%;
+        bottom: -17%;
+        font-family: Dollhouse;
+        font-size: 250%;
+        color: #E198AC;
+    }
+
+    #custom-site-title {
+      color: #E198AC !important;
+      font-weight: 300 !important;
+      /*font-style: italic;*/
+      margin-bottom: 0px;
+      margin-top: 0px;
+      /*font-family: Dollhouse;*/
+      
+    }
+
+    #custom-site-title p {
+      
+    }
+
+}
+
+@media screen and (max-width: 1080px) {
+    #masthead #site-header-main {
+     /* box-shadow: 6px 6px 5px rgba(0, 0, 0, 0.4) !important;*/
+    }
+    #blogpost-header-image {
+      box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.4);
+    }
+    #image-title {
+      font-size: 250%;
+      position: absolute;
+      top: 130px;
+    }
+    .bokannonse {
+      margin-left: 10%;
+      margin-right: 10%;
+      box-shadow: 0 0 0.5em 0.1em rgba(0, 0, 0, 0.03);
+    }
+    .bokannonse-only-img img {
+      /*background: linear-gradient(to left,#E198AC, white);*/
+      box-shadow: 0.5em 0.5em 1em 0.1em rgba(0, 0, 0, 0.1);
+      display:block;
+      margin:auto;
+    }
+    
+    .bokannonse .title {
+      font-size: 30px; 
+      
+    }
+    .bokannonse .description {
+      font-size: 16px; 
+      
+    }
+    .entry-header-image {
+      padding-left: 10%;
+      padding-right: 10%;
+      
+    }
+    .title-text-box {
+      font-size: 60%;
+      top: 0px;
+      height: 30%;
+      margin-right: 12%;
+      margin-left: 12%;
+    }
+    .header-title-text-box {
+      font-size: 200%;
+      top: 70%;
+      position: absolute;
+      color: white;
+      width: 100%;
+      text-align: center;
+      text-shadow: 2px 2px 2px rgba(0,0,0,.6);
+    }
+    
+
+    .header-title-text-box h6 {
+        float: right;
+        position: absolute;
+        right: 20%;
+        bottom: -17%;
+        font-family: Dollhouse;
+        font-size: 250%;
+        color: #E198AC;
+    }
+
+    .header-title-text-box-advent {
+      font-size: 160%;
+      top: 45%;
+    }
+    .header-title-text-box-advent h6{
+      font-size: 120%;
+    }
+
+    .pad-container {
+      margin-left:10%;
+      margin-right:10%;
+      padding-left: 5% !important;
+      padding-right: 5% !important;
+    }
+    .annonse {
+      margin-top: 2%;
+      margin-bottom: 2%;
+      background-color: #F8F8F8 !important;
+    }
+    
+    .btn-comments-container {
+      text-align: center;
+    }
+    .btn-comments a {
+      display: inline-block;
+      padding: 8px 16px;
+      padding-left: 10%;
+      border: 1px solid #bbb;
+      padding-right: 10%;
+      border-radius: 20px;
+   }
+    #nav-below .nav-next {
+      clear: none;
+    }
+
+    .crop-post-img {
+      clip: rect(5%,5%,5%,5%);
+    }
+
+    #branding {
+      display: table-cell;
+      vertical-align: middle;
+    }
+
+    #custom-site-title {
+      /*color: #E198AC !important;*/
+      font-weight: 300 !important;
+      /*font-style: italic;*/
+      margin-bottom: 0px;
+      margin-top: 0px;
+      /*font-family: Dollhouse;*/
+      
+    }
+    #custom-site-title p {
+      
+    }
+
+    .related-entry-container {
+      padding: 1%;
+      background-color: #f8f8f8;
+      text-align: center;
+    }
+
+    .related-entry-text {
+      font-size:90% !important;
+      padding: 3%;
+    }
+
+    
+
+    
+}
+@media screen and (max-width: 950px) { /* When mobile menu kicks in */
+  #branding-custom-quote {
+    top:60%;
+  }
+  #branding-custom-quote p{
+      font-size: 80%;
+   }
+
+}
+
+@media screen and (max-width: 900px) {
+  .pad-container {
+      margin-left:0%;
+      margin-right:0%;
+      padding-left: 5% !important;
+      padding-right: 5% !important;
+    }
+  
+  .header-title-text-box {
+      font-size: 170%;
+      top: 65%;
+    }
+
+    .header-title-text-box-advent {
+      font-size: 150%;
+      top: 45%;
+    }
+    .header-title-text-box-advent h6{
+      font-size: 120%;
+    }
+
+    .entry-title {
+      font-size: 200% !important;
+    }
+    #branding-custom-quote {
+      top:64%;
+    }
+    #branding-custom-quote p{
+      font-size: 65%;
+   }
+}
+
+@media screen and (max-width: 850px) { /* When mobile menu kicks in */
+  #branding-custom-quote p{
+      font-size: 60%;
+   }
+
+   #custom-site-title p {
+     font-size: 170%;
+   }
+
+}
+
+@media screen and (max-width: 800px) { /* When mobile menu kicks in */
+  #branding-custom-quote {
+     top:57%;
+  }
+  #branding-custom-quote p{
+      font-size: 70%;
+   }
+
+}
+
+@media screen and (max-width: 730px) {
+   /* #image-title { 
+      font-size: 150%;
+      top: inherit;
+      position: initial;
+    }
+    .bokannonse {
+      margin-left: 0px;
+      margin-right: 0px;
+    }
+    .bokannonse .title {
+      font-size: 25px; 
+     
+    }
+    .bokannonse .description {
+      font-size: 16px; 
+     
+    }
+    .entry-header-image {
+      padding-left: 0px;
+      padding-right: 0px;
+    }
+    .title-text-box {
+      font-size: 100%;
+      top: initial;
+      height: 40%;
+      margin-right: 15px;
+      margin-left: 15px;
+    }*/
+    .header-title-text-box {
+      font-size: 155%;
+      top: 65%;
+    }
+
+    .header-title-text-box-advent {
+      font-size: 120%;
+      top: 45%;
+    }
+    .header-title-text-box-advent h6{
+      font-size: 120%;
+    }
+}
+
+@media screen and (max-width: 600px) {
+  .header-title-text-box {
+      font-size: 110%;
+      top: 65%;
+    }
+  .header-title-text-box-advent {
+    font-size: 90%;
+    top: 45%;
+  }
+  .header-title-text-box-advent h6{
+    font-size: 120%;
+  }
+  
+}
+
+@media screen and (max-width: 450px) {
+    /*#image-title {
+      font-size: 130%;
+      top: inherit;
+      position: initial;
+    }
+    .bokannonse {
+      margin-left: 0px;
+      margin-right: 0px;
+    }
+    .bokannonse .title {
+      font-size: 21px; 
+      
+    }
+    .bokannonse .description {
+      font-size: 12px; 
+      
+    }
+    .entry-header-image {
+      padding-left: 0px;
+      padding-right: 0px;
+    }
+    .title-text-box {
+      font-size: 80%;
+      top: initial;
+      height: 40%;
+      margin-right: 15px;
+      margin-left: 15px;
+    }*/
+    .header-title-text-box {
+      font-size: 100%;
+      top: 65%;
+    }
+
+    .header-title-text-box-advent {
+    font-size: 80%;
+    top: 45%;
+  }
+  .header-title-text-box-advent h6{
+    font-size: 120%;
+  }
+
+    .entry-title {
+      font-size: 150% !important;
+    }
+}
+@media screen and (max-width: 400px) {
+  .header-title-text-box {
+      font-size: 80%;
+      top: 65%;
+    }
+
+    #custom-site-title p {
+      font-size: 110%;
+    }
+
+  
+}
+
+@media screen and (max-width: 320px) {
+    /*#image-title {
+      font-size: 100%;
+      top: inherit;
+      position: initial;
+    }
+    .bokannonse {
+      margin-left: 0px;
+      margin-right: 0px;
+    }
+    .bokannonse .title {
+      font-size: 17px; 
+      
+    }
+    .bokannonse .description {
+      font-size: 12px; 
+      
+    }
+    .entry-header-image {
+      padding-left: 0px;
+      padding-right: 0px;
+    }
+    .title-text-box {
+      font-size: 80%;
+      top: initial;
+      height: 40%;
+      margin-right: 15px;
+      margin-left: 15px;
+    }*/
+    .header-title-text-box {
+      font-size: 70%;
+      top: 65%;
+    }
+    .entry-title {
+      font-size: 120% !important;
+    }
+}
