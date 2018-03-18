@@ -7,18 +7,6 @@
 
  <div id="container" > <!-- Here should be fluida custom class -->
 	<main id="main" role="main" class="main" >
-        <!--<a href="https://www.tanum.no/_dokumentar-og-fakta/helse-og-samliv/familie-og-helse/balladen-med-fasaden-lene-hval-9788202561208?utm_source=Balladen-med-fasaden&utm_medium=referral">
-            <div class="bokannonse">
-                <div class"bokannonse-img">
-                    <img src="http://www.norahelmer.no/wp-content/uploads/2017/09/Skjermbilde-2017-09-03-kl.-09.20.45.png"/ alt="" >
-                </div>
-                <div class"bokannonse-text">
-                    <p class="title" >BALLADEN MED FASADEN</p>
-                    <p class="description" >Håndbok for yummimummies og partallsfedre.</p>
-                     <p class="description" >Lurer du på hvordan du skal bli 10 - 15 % lykkeligere i hverdagen? Kjøp Noras håndbok for yummimummies og partallsfedre <a href="https://www.tanum.no/_dokumentar-og-fakta/helse-og-samliv/familie-og-helse/balladen-med-fasaden-lene-hval-9788202561208?utm_source=Balladen-med-fasaden&utm_medium=referral">her</a>.</p>  
-                </div>
-            </div>
-        </a>-->
         
         <a href="http://norahelmer.no/ccount212/click.php?id=bookclick">
             <div class="bokannonse-only-img bokannonse-only-img-header">
@@ -33,14 +21,6 @@
 
         <?php if ( $the_query->have_posts() ) : ?>
         <?php while ( $the_query->have_posts() ) : $the_query->the_post(); ?>            
-            <!--<a href="<?php echo get_permalink(); ?>">
-                <div class="entry-header-image">
-                    <img id="blogpost-header-image" class="aligncenter wp-image-305 size-large" src=" <?php echo catch_that_image(); ?>">
-                    <div class="title-text-box">
-                        <?php the_title( '<h2 id="image-title" class="entry-title" ' . cryout_schema_microdata( 'entry-title', 0 ) . '>', '</h2>' ); ?>
-                    </div>
-                </div>
-            </a>-->
             <article id="post-<?php the_ID(); ?>" <?php post_class( array('pad-container')); ?>>
                 <header>
 				<a href="<?php echo get_permalink(); ?>"><?php the_title( '<h1 class="entry-title" ' . cryout_schema_microdata( 'entry-title', 0 ) . '>', '</h1>' ); ?></a>
@@ -57,11 +37,42 @@
                     <?php the_content(); ?>
                     <?php wp_link_pages( array( 'before' => '<div class="page-link">' . __( 'Pages:', 'fluida' ), 'after' => '</div>' ) ); ?>
                 </div>
-                <div class="tnp tnp-subscription">
-                    <br>
+
+                <script type="text/javascript">
+                //<![CDATA[
+                if (typeof newsletter_check !== "function") {
+                window.newsletter_check = function (f) {
+                    var re = /^([a-zA-Z0-9_\.\-\+])+\@(([a-zA-Z0-9\-]{1,})+\.)+([a-zA-Z0-9]{2,})+$/;
+                    if (!re.test(f.elements["ne"].value)) {
+                        alert("Denne eposten er det noe galt med.");
+                        return false;
+                    }
+                    for (var i=1; i<20; i++) {
+                    if (f.elements["np" + i] && f.elements["np" + i].required && f.elements["np" + i].value == "") {
+                        alert("");
+                        return false;
+                    }
+                    }
+                    if (f.elements["ny"] && !f.elements["ny"].checked) {
+                        alert("Du må akseptere personvernserklæringen");
+                        return false;
+                    }
+                    return true;
+                }
+                }
+                //]]>
+                </script>
+
+                <div class="nyhetsbrev">
                     <form method="post" action="http://www.norahelmer.no/?na=s" onsubmit="return newsletter_check(this)">
-                        <div class="tnp-field tnp-field-email"><label style="display:none; color:#A6A6A6;">Email</label><input class="tnp-email" type="email" placeholder="yummy@mummy.com" name="ne" required></div>
-                        <div class="tnp-field tnp-field-button"><input style="background-color:#D74389 !important;" class="tnp-submit" type="submit" value="Registrer deg for å få de nyeste norastripene">
+                        <div>
+                            <input class="nyhetsbrev-email" type="text" placeholder="yummy@mummy.bliss" name="email" required>   
+                        </div>
+                        <div> 
+                            <input type="checkbox" name="ny" required>&nbsp;Jeg ønsker å motta nyhetbrev fra norahelmer.no. <a style="text-decoration:underline;" target="_blank" href="www.norahelmer.no/gdpr">Link personvern</a>
+                        </div>
+                        <div>
+                            <input class="tnp-submit nyhetsbrev-submit" type="submit" value="Få de nyeste Norastripene rett i mailboksen"/>
                         </div>
                     </form>
                 </div>
@@ -74,20 +85,7 @@
                 
                 
             </article>
-            <!--<div class="annonse">
-                <a href="https://www.tanum.no/_dokumentar-og-fakta/helse-og-samliv/familie-og-helse/balladen-med-fasaden-lene-hval-9788202561208?utm_source=Balladen-med-fasaden&utm_medium=referral">
-                    <div class="bokannonse">
-                        <div class"bokannonse-img">
-                            <img src="http://www.norahelmer.no/wp-content/uploads/2017/09/Skjermbilde-2017-09-03-kl.-09.20.45.png"/ alt="" >
-                        </div>
-                        <div class"bokannonse-text">
-                            <p class="title" >BALLADEN MED FASADEN</p>
-                            <p class="description" >Håndbok for yummimummies og partallsfedre.</p>
-                            <p class="description" >Lurer du på hvordan du skal bli 10 - 15 % lykkeligere i hverdagen? Kjøp Noras håndbok for yummimummies og partallsfedre <a href="https://www.tanum.no/_dokumentar-og-fakta/helse-og-samliv/familie-og-helse/balladen-med-fasaden-lene-hval-9788202561208?utm_source=Balladen-med-fasaden&utm_medium=referral">her</a>.</p>  
-                        </div>
-                    </div>
-                </a>
-            </div>-->
+
             <a href="http://norahelmer.no/ccount212/click.php?id=bookclick">
                 <div class="bokannonse-only-img bokannonse-only-img-between-post">
                     <img src="http://www.norahelmer.no/wp-content/uploads/2017/09/Balladen-med-fasaden-Mailsignatur.jpg" alt="">
